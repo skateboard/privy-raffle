@@ -41,7 +41,8 @@ func (p *privy) Run() {
 			if err != nil {
 				continue
 			}
-			email := fmt.Sprintf("%s.%s1%s", first, last, p.input.CatchAllEmail)
+			email := fmt.Sprintf("%s%s1%s", first, last, p.input.CatchAllEmail)
+			email = strings.ToLower(email)
 			fmt.Printf("signing-up email: %s\n", email)
 
 			err = p.signUpEmail(first, last, email)
@@ -59,7 +60,6 @@ func (p *privy) Run() {
 
 			fmt.Printf("signed-up email: %s\n", email)
 		}
-		fmt.Printf("succesfully signed-up %d emails\n", p.input.CatchAllLimit)
 		return
 	}
 
@@ -96,8 +96,6 @@ func (p *privy) Run() {
 
 		fmt.Printf("signed-up email: %s\n", email)
 	}
-
-	fmt.Printf("succesfully signed-up %d emails\n", len(emails))
 }
 
 func (p *privy) signUpEmail(first, last, email string) error {
