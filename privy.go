@@ -126,9 +126,11 @@ func (p *privy) signUpEmail(first, last, email string) error {
         "sessions_count": 0,
         "pageviews_all_time": 0,
         "pageviews_this_session": 0,
-        "utm_medium": "unknown"
+        "utm_medium": "unknown",
+		"url": "%s"
     }
-}`, first, last, email, p.input.FormName, cast.ToInt(p.input.DisplayID))
+}`, first, last, email, p.input.FormName, cast.ToInt(p.input.DisplayID),
+		fmt.Sprintf("https://promotions.lpage.co/campaigns/%s/form?viewport_type=embedded&isBuilder=false", p.input.CampaignID))
 
 	req, err := http.NewRequest("POST", url, strings.NewReader(payload))
 	if err != nil {
