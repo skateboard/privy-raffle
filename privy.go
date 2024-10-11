@@ -9,6 +9,7 @@ import (
 	"github.com/data-harvesters/goapify"
 	goapifytls "github.com/data-harvesters/goapify-tls"
 	"github.com/skateboard/ajson"
+	"github.com/spf13/cast"
 )
 
 type privy struct {
@@ -129,7 +130,7 @@ func (p *privy) signUpEmail(first, last, email string) error {
         "pageviews_this_session": 0,
         "utm_medium": "unknown"
     }
-}`, first, last, email, p.input.FormName, p.input.DisplayID)
+}`, first, last, email, p.input.FormName, cast.ToInt(p.input.DisplayID))
 
 	req, err := http.NewRequest("POST", url, strings.NewReader(payload))
 	if err != nil {
