@@ -13,11 +13,13 @@ type input struct {
 	BuisnessID string `json:"buisnessID"`
 	CampaignID string `json:"campaignID"`
 	FormName   string `json:"formName"`
+	DisplayID  string `json:"displayID"`
 
 	UseCatchAll   bool   `json:"useCatchAll"`
 	CatchAllEmail string `json:"catchAllEmail"`
+	CatchAllLimit int    `json:"catchAllLimit"`
 
-	Emails []string `json:"emails"`
+	Emails *[]string `json:"emails"`
 }
 
 func main() {

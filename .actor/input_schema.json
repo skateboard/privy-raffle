@@ -24,6 +24,13 @@
             "prefill": "1234",
             "editor": "textfield"
         },
+        "displayID": {
+            "title": "Display ID",
+            "description": "the privy display ID",
+            "type": "string",
+            "prefill": "1234",
+            "editor": "textfield"
+        },
         "useCatchAll": {
             "title": "Use Catchall",
             "type": "boolean",
@@ -36,6 +43,13 @@
             "type": "string",
             "prefill": "",
             "editor": "textfield"
+        },
+        "catchAllLimit": {
+            "title": "Catchall Limit",
+            "description": "limit the amount of times to use a catch all email",
+            "type": "integer",
+            "default": 100,
+            "maximum": 1000
         },
         "emails": {
             "title": "Emails",
