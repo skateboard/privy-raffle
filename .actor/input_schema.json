@@ -1,0 +1,59 @@
+{
+    "title": "Privy Raffle Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "buisnessID": {
+            "title": "Buisness ID",
+            "description": "a privy buisness id",
+            "type": "string",
+            "prefill": "1234",
+            "editor": "textfield"
+        },
+        "campaignID": {
+            "title": "Campaign ID",
+            "description": "a privy campaign id",
+            "type": "string",
+            "prefill": "1234",
+            "editor": "textfield"
+        },
+        "formName": {
+            "title": "Form Name",
+            "description": "the privy form name",
+            "type": "string",
+            "prefill": "1234",
+            "editor": "textfield"
+        },
+        "emailOptions": {
+            "useCatchAll": {
+                "title": "Use Catchall",
+                "type": "boolean",
+                "description": "Use ",
+                "default": true,
+                "groupCaption": "Email Options",
+                "groupDescription": "Email options for the Actor"
+            },
+            "catchAllEmail": {
+                "title": "Catchall Email",
+                "description": "the catch all email to use",
+                "type": "string",
+                "prefill": "@awesome.com",
+                "editor": "textfield"
+            }
+        },
+        "proxyConfiguration": {
+            "title": "Proxy configuration",
+            "type": "object",
+            "description": "Select proxies for scraper.",
+            "prefill": {
+                "useApifyProxy": true
+            },
+            "editor": "proxy"
+        }
+    },
+    "required": [
+        "buisnessID",
+        "campaignID",
+        "formName"
+    ]
+}
