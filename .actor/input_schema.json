@@ -24,22 +24,20 @@
             "prefill": "1234",
             "editor": "textfield"
         },
-        "emailOptions": {
-            "useCatchAll": {
-                "title": "Use Catchall",
-                "type": "boolean",
-                "description": "Use ",
-                "default": true,
-                "groupCaption": "Email Options",
-                "groupDescription": "Email options for the Actor"
-            },
-            "catchAllEmail": {
-                "title": "Catchall Email",
-                "description": "the catch all email to use",
-                "type": "string",
-                "prefill": "@awesome.com",
-                "editor": "textfield"
-            }
+        "useCatchAll": {
+            "title": "Use Catchall",
+            "type": "boolean",
+            "description": "Use ",
+            "default": true,
+            "groupCaption": "Email Options",
+            "groupDescription": "Email options for the Actor"
+        },
+        "catchAllEmail": {
+            "title": "Catchall Email",
+            "description": "the catch all email to use",
+            "type": "string",
+            "prefill": "@awesome.com",
+            "editor": "textfield"
         },
         "proxyConfiguration": {
             "title": "Proxy configuration",
