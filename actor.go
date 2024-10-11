@@ -13,6 +13,11 @@ type input struct {
 	BuisnessID string `json:"buisnessID"`
 	CampaignID string `json:"campaignID"`
 	FormName   string `json:"formName"`
+
+	UseCatchAll   bool   `json:"useCatchAll"`
+	CatchAllEmail string `json:"catchAllEmail"`
+
+	Emails []string `json:"emails"`
 }
 
 func main() {

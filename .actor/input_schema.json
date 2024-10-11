@@ -28,16 +28,21 @@
             "title": "Use Catchall",
             "type": "boolean",
             "description": "Use ",
-            "default": true,
-            "groupCaption": "Email Options",
-            "groupDescription": "Email options for the Actor"
+            "default": true
         },
         "catchAllEmail": {
             "title": "Catchall Email",
             "description": "the catch all email to use",
             "type": "string",
-            "prefill": "@awesome.com",
+            "prefill": "",
             "editor": "textfield"
+        },
+        "emails": {
+            "title": "Emails",
+            "type": "array",
+            "description": "An array of emails to use.",
+            "prefill": [""],
+            "editor": "stringList"
         },
         "proxyConfiguration": {
             "title": "Proxy configuration",
